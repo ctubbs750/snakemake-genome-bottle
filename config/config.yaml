@@ -1,3 +1,7 @@
+# -------------- #
+#    Genome      #
+# -------------- #
+
 GENOME:
   # Genome builds
   builds:
@@ -12,3 +16,29 @@ GENOME:
   # ENCODE Blacklist URLs
   blacklist_hg19: https://github.com/Boyle-Lab/Blacklist/raw/master/lists/hg19-blacklist.v2.bed.gz
   blacklist_hg38: https://github.com/Boyle-Lab/Blacklist/raw/master/lists/hg38-blacklist.v2.bed.gz
+
+
+# -------------- #
+#    Gencode     #
+# -------------- #
+
+GENCODE:
+  # I/O
+  INSTALL_DIR: resources/gencode
+  PROCESS_DIR: results/gencode
+
+  # Genome build
+  GENOME_BUILD: # Can be hg19 or hg38
+
+  # Size of window on TSS to define promoters
+  PROMOTER_WINDOW: 2000
+
+  # Chromosome sizes for either genome build - URLs
+  CHROM_SIZES:
+    HG19: https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.chrom.sizes
+    HG38: https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes
+
+  # Gencode annotation files for either genome build - URLs
+  GENCODE_ANNOTATION:
+    HG19: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_46/GRCh37_mapping/gencode.v46lift37.basic.annotation.gtf.gz
+    HG38: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_46/gencode.v46.basic.annotation.gtf.gz

@@ -16,9 +16,16 @@ module genome:
     config:
         config["GENOME"]
 
+module gencode:
+    snakefile:
+        "rules/gencode.smk"
+    config:
+        config["GENCODE"]
+
 
 # Import modules
 use rule * from genome as genome_*
+use rule * from gencode as gencode_*
 
 
 ###
@@ -33,3 +40,4 @@ rule all:
         """
     input:
         rules.genome_all.input,
+        rules.gencode_all.input,
