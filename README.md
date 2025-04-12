@@ -1,4 +1,4 @@
-# Genome
+# snakemake-genome-bottle
 
 A Snakemake module for installing a reference genome along with its supporting files.
 
